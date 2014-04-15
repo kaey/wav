@@ -53,8 +53,8 @@ func (m *Writer) Write(p []byte) (n int, err error) {
 	return
 }
 
-func (m *Writer) Close() (err error) {
-	err = m.writeHeader()
+func (m *Writer) Close() error {
+	err := m.writeHeader()
 	if err != nil {
 		return err
 	}
